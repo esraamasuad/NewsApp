@@ -16,7 +16,9 @@ struct NewsListView: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 ForEach(result.articles!, id: \.title) { article in
-                    ArticleView(article: article)
+                    NavigationLink(destination: DetailsView(article: article)) {
+                        ArticleView(article: article)
+                    }
                 }
             }
             .background(Color.clear)
