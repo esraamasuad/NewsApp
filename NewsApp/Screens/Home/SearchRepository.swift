@@ -35,17 +35,15 @@ class MovieRepository {
                     case .failure(let error):
                         observer.onError(error)
                     }
-            }
+                }
             return Disposables.create()
         }
-        observable
-        .observeOn(MainScheduler.instance)
-        
+        _ =  observable.observe(on: MainScheduler.instance)
         return observable
     }
     
     func searchMovies(query: String) -> Observable<NewsGeneralModel> {
 //        let baseUrl = "https://newsapi.org/v2/everything?q=Apple&from=2023-12-05&sortBy=popularity&apiKey=API_KEY"
-        return createRequest(url: "https://newsapi.org/v2/everything?q=\(query)&from=2023-12-05&sortBy=popularity&apiKey=89a16c4aaba143c5993cbb3f1ac4e7a2")
+        return createRequest(url: "https://newsapi.org/v2/everything?q=\(query)&from=2023-12-05&sortBy=popularity&pageSize=2&apiKey=89a16c4aaba143c5993cbb3f1ac4e7a2")
     }
 }
