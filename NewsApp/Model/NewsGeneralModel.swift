@@ -42,6 +42,22 @@ class ArticleModel: Object, ObjectKeyIdentifiable, Codable {
         case publishedAt = "publishedAt"
         case content = "content"
     }
+    
+    lazy var formatedDate: String = { () -> String in
+        guard let originalDateString = publishedAt else {return ""}
+      
+        let originalFormat = DateFormatter()
+        originalFormat.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let date = originalFormat.date(from: originalDateString)
+        
+        let outputFormat = DateFormatter()
+        outputFormat.dateFormat = "MM-dd-yyyy HH:mm"
+
+        if let date = date {
+            return outputFormat.string(from: date)
+        }
+        return ""
+    }()
 }
 
 // MARK: - SourceModel

@@ -20,6 +20,8 @@ struct NewsListView: View {
                         ArticleView(article: article)
                     }
                 }
+                Spacer()
+                    .frame(height: 40)
             }
             .background(Color.clear)
         }
@@ -45,6 +47,7 @@ struct ArticleView: View {
                 .resizable()
                 .frame(height: 150)
                 .cornerRadius(20)
+                .aspectRatio(contentMode: .fit)
             Text(article.title ?? "")
                 .foregroundColor(AppColors.titleTextColor)
                 .font(.subheadline)

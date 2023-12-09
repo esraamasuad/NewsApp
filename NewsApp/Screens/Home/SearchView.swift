@@ -38,7 +38,6 @@ struct SearchView: View {
                         Text("Offline Mode \n No Internet Connection...")
                             .font(.caption)
                             .multilineTextAlignment(.center)
-                            .padding()
                     }
                     
                     Group { () -> AnyView in
@@ -62,6 +61,7 @@ struct SearchView: View {
                     Spacer()
                 }
             }
+            .ignoresSafeArea(edges: .bottom)
             .toolbar(content: {
                 ToolbarItemGroup(placement: .navigationBarTrailing, content: {
                     Button(action: {isDarkMode.toggle()}, label: {
@@ -78,9 +78,7 @@ struct SearchView: View {
         .environment(\.colorScheme, isDarkMode ? .dark : .light)
         .environment(\.locale, Locale.init(identifier: isArabic ? "ar" : "en"))
         .environment(\.layoutDirection, isArabic ? .rightToLeft : .leftToRight)
-        .onAppear {
-            lastSearchResult()
-        }
+        .onAppear {}
         .onDisappear {}
     }
     

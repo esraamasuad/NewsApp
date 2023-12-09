@@ -47,7 +47,7 @@ class NewsRepository {
     func searchQuery(query: String) -> Observable<NewsGeneralModel> {
         let language = isArabic ? "ar" : "en"
         
-        let baseUrl = "https://newsapi.org/v2/everything?q=\(query)&from=2023-12-05&sortBy=popularity&page=1&pageSize=4&language=\(language)&apiKey=89a16c4aaba143c5993cbb3f1ac4e7a2"
+        let baseUrl = "https://newsapi.org/v2/everything?q=\(query)&from=2023-12-01&sortBy=publishedAt&page=1&pageSize=10&language=\(language)&apiKey=89a16c4aaba143c5993cbb3f1ac4e7a2"
         
         ///addingPercentEncoding to the link for search by arabic and multi spaces keyword
         let encodedUrl = baseUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? baseUrl
@@ -55,7 +55,10 @@ class NewsRepository {
         return createRequest(url: encodedUrl)
     }
     
-    func save() {
-        
+    func getCurrentData() -> String {
+        let currentDate = Date()
+        let outputFormat = DateFormatter()
+        outputFormat.dateFormat = "yyyy-MM-dd"
+        return outputFormat.string(from: currentDate)
     }
 }
