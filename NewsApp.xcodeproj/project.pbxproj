@@ -16,12 +16,16 @@
 		041D4C042B20E6C90054C237 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C032B20E6C90054C237 /* SearchView.swift */; };
 		041D4C082B20E7DC0054C237 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C072B20E7DC0054C237 /* DetailsView.swift */; };
 		041D4C0A2B210E420054C237 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C092B210E420054C237 /* SearchViewModel.swift */; };
-		041D4C0C2B210E7A0054C237 /* NewsGeneralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C0B2B210E7A0054C237 /* NewsGeneralModel.swift */; };
 		041D4C2A2B2110650054C237 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C292B2110650054C237 /* SearchRepository.swift */; };
 		041D4C2D2B21112F0054C237 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 041D4C2C2B21112F0054C237 /* Alamofire */; };
 		041D4C4A2B2119B30054C237 /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C492B2119B30054C237 /* NewsListView.swift */; };
 		041D4C4E2B21DC4E0054C237 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 041D4C4D2B21DC4E0054C237 /* RxSwift */; };
 		041D4C512B21DD610054C237 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 041D4C502B21DD610054C237 /* Kingfisher */; };
+		041D4C602B233F840054C237 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 041D4C5F2B233F840054C237 /* Realm */; };
+		041D4C622B233F840054C237 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 041D4C612B233F840054C237 /* RealmSwift */; };
+		041D4C6A2B23407E0054C237 /* NewsGeneralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C692B23407E0054C237 /* NewsGeneralModel.swift */; };
+		041D4C6C2B2340C60054C237 /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C6B2B2340C60054C237 /* SearchList.swift */; };
+		041D4C6F2B23C7650054C237 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C6E2B23C7650054C237 /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,9 +74,11 @@
 		041D4C032B20E6C90054C237 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		041D4C072B20E7DC0054C237 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		041D4C092B210E420054C237 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		041D4C0B2B210E7A0054C237 /* NewsGeneralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsGeneralModel.swift; sourceTree = "<group>"; };
 		041D4C292B2110650054C237 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		041D4C492B2119B30054C237 /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
+		041D4C692B23407E0054C237 /* NewsGeneralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsGeneralModel.swift; sourceTree = "<group>"; };
+		041D4C6B2B2340C60054C237 /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
+		041D4C6E2B23C7650054C237 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,8 @@
 			files = (
 				041D4C512B21DD610054C237 /* Kingfisher in Frameworks */,
 				041D4C4E2B21DC4E0054C237 /* RxSwift in Frameworks */,
+				041D4C602B233F840054C237 /* Realm in Frameworks */,
+				041D4C622B233F840054C237 /* RealmSwift in Frameworks */,
 				041D4C2D2B21112F0054C237 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,8 +134,10 @@
 		041D4B952B1FC9430054C237 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				041D4C6D2B23C74E0054C237 /* Utils */,
 				041D4C002B208CEF0054C237 /* Resources */,
 				041D4BFF2B208CCC0054C237 /* SupportFiles */,
+				041D4C682B23403C0054C237 /* Model */,
 				041D4C022B20E6430054C237 /* Screens */,
 				041D4C4B2B21D79F0054C237 /* Views */,
 				041D4BA42B1FC9450054C237 /* Info.plist */,
@@ -158,7 +168,6 @@
 			children = (
 				041D4C032B20E6C90054C237 /* SearchView.swift */,
 				041D4C092B210E420054C237 /* SearchViewModel.swift */,
-				041D4C0B2B210E7A0054C237 /* NewsGeneralModel.swift */,
 				041D4C292B2110650054C237 /* SearchRepository.swift */,
 			);
 			path = Home;
@@ -207,6 +216,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		041D4C682B23403C0054C237 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				041D4C6B2B2340C60054C237 /* SearchList.swift */,
+				041D4C692B23407E0054C237 /* NewsGeneralModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		041D4C6D2B23C74E0054C237 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				041D4C6E2B23C7650054C237 /* NetworkMonitor.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,6 +254,8 @@
 				041D4C2C2B21112F0054C237 /* Alamofire */,
 				041D4C4D2B21DC4E0054C237 /* RxSwift */,
 				041D4C502B21DD610054C237 /* Kingfisher */,
+				041D4C5F2B233F840054C237 /* Realm */,
+				041D4C612B233F840054C237 /* RealmSwift */,
 			);
 			productName = NewsApp;
 			productReference = 041D4B932B1FC9430054C237 /* NewsApp.app */;
@@ -304,6 +332,7 @@
 				041D4C2B2B21112F0054C237 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				041D4C4C2B21DC4E0054C237 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				041D4C4F2B21DD610054C237 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				041D4C5E2B233F840054C237 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 041D4B942B1FC9430054C237 /* Products */;
 			projectDirPath = "";
@@ -349,10 +378,12 @@
 			files = (
 				041D4C0A2B210E420054C237 /* SearchViewModel.swift in Sources */,
 				041D4C4A2B2119B30054C237 /* NewsListView.swift in Sources */,
+				041D4C6C2B2340C60054C237 /* SearchList.swift in Sources */,
 				041D4C042B20E6C90054C237 /* SearchView.swift in Sources */,
 				041D4C082B20E7DC0054C237 /* DetailsView.swift in Sources */,
-				041D4C0C2B210E7A0054C237 /* NewsGeneralModel.swift in Sources */,
 				041D4C2A2B2110650054C237 /* SearchRepository.swift in Sources */,
+				041D4C6A2B23407E0054C237 /* NewsGeneralModel.swift in Sources */,
+				041D4C6F2B23C7650054C237 /* NetworkMonitor.swift in Sources */,
 				041D4B972B1FC9430054C237 /* AppDelegate.swift in Sources */,
 				041D4B992B1FC9430054C237 /* SceneDelegate.swift in Sources */,
 			);
@@ -522,8 +553,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3TMR4K63L;
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -543,8 +575,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3TMR4K63L;
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -709,6 +742,14 @@
 				minimumVersion = 6.3.1;
 			};
 		};
+		041D4C5E2B233F840054C237 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.25.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -726,6 +767,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 041D4C4F2B21DD610054C237 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		041D4C5F2B233F840054C237 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041D4C5E2B233F840054C237 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		041D4C612B233F840054C237 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041D4C5E2B233F840054C237 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
