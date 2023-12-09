@@ -10,8 +10,10 @@ import Kingfisher
 
 struct NewsListView: View {
     
+    //MARK: - PROPERTIES
     let result: NewsGeneralModel
     
+    //MARK: - Body
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
@@ -39,15 +41,21 @@ struct NewsListView: View {
 
 struct ArticleView: View {
     
+    //MARK: - PROPERTIES
     let article: ArticleModel
     
+    //MARK: - Body
     var body: some View {
-        VStack(alignment: .leading, spacing: 5, content: {
-            KFImage(URL(string: (article.urlToImage ?? "")))
-                .resizable()
-                .frame(height: 150)
-                .cornerRadius(20)
-                .aspectRatio(contentMode: .fit)
+        VStack(alignment: .leading, spacing: 8, content: {
+            HStack {
+                Spacer()
+                KFImage(URL(string: (article.urlToImage ?? "")))
+                    .resizable()
+                    .frame(height: 150)
+                    .cornerRadius(20)
+                    .aspectRatio(contentMode: .fit)
+                Spacer()
+            }
             Text(article.title ?? "")
                 .foregroundColor(AppColors.titleTextColor)
                 .font(.subheadline)
@@ -56,7 +64,7 @@ struct ArticleView: View {
                 .foregroundColor(.gray)
                 .lineLimit(1)
             
-            Spacer()
+//            Spacer()
         })
         .padding()
         .background(AppColors.cardBackgroundColor)

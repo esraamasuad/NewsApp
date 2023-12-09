@@ -8,6 +8,8 @@
 import Foundation
 import RealmSwift
 
+//MARK: - Realm Model -
+
 class SearchList: Object, ObjectKeyIdentifiable {
     @Persisted var query: String
     @Persisted var date: String

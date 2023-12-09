@@ -11,6 +11,7 @@ import Foundation
 
 struct SearchView: View {
     
+    //MARK: - PROPERTIES
     @ObservedObject var vm: SearchViewModel
     @State private var query: String = ""
     @State private var isOffline: Bool = false
@@ -22,6 +23,8 @@ struct SearchView: View {
     init(viewModel: SearchViewModel) {
         self.vm = viewModel
     }
+    
+    //MARK: - Body
     
     var body: some View {
         NavigationView {

@@ -8,6 +8,8 @@
 import Foundation
 import Network
 
+//MARK: - CHECK NETWORK FOR ONLINE & OFFLINE MODE
+
 //@Observable
 class NetworkMonitor: ObservableObject {
     private var networkMonitor = NWPathMonitor()

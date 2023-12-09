@@ -14,8 +14,8 @@ class NewsRepository {
     
     @Default(\.isArabic) var isArabic
 
+    //MARK: - Singleton RemoteModel
     func createRequest<T: Codable>(url: String) -> Observable<T> {
-        
         let observable = Observable<T>.create { observer -> Disposable in
             Alamofire.request(url)
                 .validate()
@@ -44,6 +44,7 @@ class NewsRepository {
         return observable
     }
     
+    //MARK: - searchQuery
     func searchQuery(query: String) -> Observable<NewsGeneralModel> {
         let language = isArabic ? "ar" : "en"
         

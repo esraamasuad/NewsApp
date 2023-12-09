@@ -7,10 +7,11 @@
 
 import SwiftUI
 
+//MARK: - AppColors Scheme -
 struct AppColors {
 //    static var primaryColor = Color("primaryColor")
 //    static var secondaryColor = Color("secondaryColor")
-    static var titleTextColor = Color("titleTextColor")
+    static var titleTextColor = Color("titleColor")
     static var cardBackgroundColor = Color("cardBackgroundColor")
     
 }

@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
+//MARK: - AppStorage -> save the last app status for isDarkMode & Language
+
 public class Defaults: ObservableObject {
     @AppStorage("isDarkMode") public var isDarkMode = true
     @AppStorage("appLanguage") public var isArabic = false

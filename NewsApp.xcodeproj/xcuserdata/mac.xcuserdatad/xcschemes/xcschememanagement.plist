@@ -28,6 +28,16 @@
 		<key>NewsApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>NewsAppTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>NewsAppUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 		<key>Rx (Playground) 1.xcscheme</key>
@@ -97,6 +107,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>041D4B922B1FC9430054C237</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>041D4BA82B1FC9450054C237</key>
 		<dict>
 			<key>primary</key>
 			<true/>

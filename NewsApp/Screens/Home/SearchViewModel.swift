@@ -12,14 +12,15 @@ import SwiftUI
 
 class SearchViewModel : ObservableObject {
     
+    //MARK: - PROPERTIES
     @Published var uiState: SearchPageState = .Init
     @ObservedResults(SearchList.self) var searchList
     
     let repository: NewsRepository = NewsRepository()
     let disposableBag = DisposeBag()
     
+    //MARK: - update View state
     func loadMovies(query: String) {
-
         self.uiState = .Loading("Loading for \(query)")
         repository
             .searchQuery(query: query)
@@ -72,6 +73,7 @@ class SearchViewModel : ObservableObject {
     
 }
 
+//MARK: - Search Page States
 enum SearchPageState {
     case Init
     case Loading(String)
