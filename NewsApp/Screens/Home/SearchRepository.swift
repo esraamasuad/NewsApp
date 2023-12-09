@@ -8,8 +8,9 @@
 import Foundation
 import Alamofire
 import RxSwift
+import RealmSwift
 
-class MovieRepository {
+class NewsRepository {
     
     func createRequest<T: Codable>(url: String) -> Observable<T> {
         
@@ -44,6 +45,10 @@ class MovieRepository {
     
     func searchMovies(query: String) -> Observable<NewsGeneralModel> {
 //        let baseUrl = "https://newsapi.org/v2/everything?q=Apple&from=2023-12-05&sortBy=popularity&apiKey=API_KEY"
-        return createRequest(url: "https://newsapi.org/v2/everything?q=\(query)&from=2023-12-05&sortBy=popularity&pageSize=2&apiKey=89a16c4aaba143c5993cbb3f1ac4e7a2")
+        return createRequest(url: "https://newsapi.org/v2/everything?q=\(query)&from=2023-12-05&sortBy=popularity&page=2&pageSize=4&apiKey=89a16c4aaba143c5993cbb3f1ac4e7a2")
+    }
+    
+    func save() {
+        
     }
 }

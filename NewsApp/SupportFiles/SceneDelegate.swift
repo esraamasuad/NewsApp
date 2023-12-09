@@ -19,6 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //        guard let _ = (scene as? UIWindowScene) else { return }
         
+//        let _ = UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+        let _ = print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
+        
         let initialView = SearchView(viewModel: SearchViewModel())
         
         if let windowScene = scene as? UIWindowScene {
