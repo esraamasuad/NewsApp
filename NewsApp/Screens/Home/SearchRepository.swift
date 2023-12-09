@@ -12,10 +12,11 @@ import RealmSwift
 
 class NewsRepository {
     
+    @Default(\.isArabic) var isArabic
+
     func createRequest<T: Codable>(url: String) -> Observable<T> {
         
         let observable = Observable<T>.create { observer -> Disposable in
-            
             Alamofire.request(url)
                 .validate()
                 .responseJSON { response in
@@ -43,9 +44,15 @@ class NewsRepository {
         return observable
     }
     
-    func searchMovies(query: String) -> Observable<NewsGeneralModel> {
-//        let baseUrl = "https://newsapi.org/v2/everything?q=Apple&from=2023-12-05&sortBy=popularity&apiKey=API_KEY"
-        return createRequest(url: "https://newsapi.org/v2/everything?q=\(query)&from=2023-12-05&sortBy=popularity&page=2&pageSize=4&apiKey=89a16c4aaba143c5993cbb3f1ac4e7a2")
+    func searchQuery(query: String) -> Observable<NewsGeneralModel> {
+        let language = isArabic ? "ar" : "en"
+        
+        let baseUrl = "https://newsapi.org/v2/everything?q=\(query)&from=2023-12-05&sortBy=popularity&page=1&pageSize=4&language=\(language)&apiKey=89a16c4aaba143c5993cbb3f1ac4e7a2"
+        
+        ///addingPercentEncoding to the link for search by arabic and multi spaces keyword
+        let encodedUrl = baseUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? baseUrl
+        
+        return createRequest(url: encodedUrl)
     }
     
     func save() {

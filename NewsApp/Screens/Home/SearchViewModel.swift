@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RealmSwift
+import SwiftUI
 
 class SearchViewModel : ObservableObject {
     
@@ -18,10 +19,10 @@ class SearchViewModel : ObservableObject {
     let disposableBag = DisposeBag()
     
     func loadMovies(query: String) {
-        
+
         self.uiState = .Loading("Loading for \(query)")
         repository
-            .searchMovies(query: query)
+            .searchQuery(query: query)
             .subscribe(
                 onNext: { [weak self] response in
                     debugPrint(response)

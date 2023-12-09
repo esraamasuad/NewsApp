@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  NewsApp
+
+  Created by Esraa on 09/12/2023.
+  
+*/
+
+"News" = "News";
+"search..." = "search...";
+"Offline Mode \n No Internet Connection..." = "Offline Mode \n No Internet Connection...";
+"Please type in to query" = "Please type in to query";
+"No matching search found" = "No matching search found";
+"Read more..." = "Read more...";
+"Results couldnot be fetched" = "Results couldnot be fetched";
+"Loading for %@" = "Loading for %@";

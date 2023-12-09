@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RealmSwift
+import Foundation
 
 struct SearchView: View {
     
@@ -14,7 +15,9 @@ struct SearchView: View {
     @State private var query: String = ""
     @State private var isOffline: Bool = false
     @StateObject private var networkMonitor = NetworkMonitor()
-    @AppStorage("isDarkMode") private var isDarkMode = true
+    
+    @Default(\.isArabic) var isArabic
+    @Default(\.isDarkMode) var isDarkMode
     
     init(viewModel: SearchViewModel) {
         self.vm = viewModel
@@ -34,6 +37,8 @@ struct SearchView: View {
                     if isOffline {
                         Text("Offline Mode \n No Internet Connection...")
                             .font(.caption)
+                            .multilineTextAlignment(.center)
+                            .padding()
                     }
                     
                     Group { () -> AnyView in
@@ -41,8 +46,8 @@ struct SearchView: View {
                         case .Init:
                             return AnyView(Text("Please type in to query"))
                             
-                        case .Loading(let message):
-                            return AnyView(Text(message))
+                        case .Loading(_):
+                            return AnyView(Text("Loading for \(query)"))
                             
                         case .Fetched(let moviesResult):
                             return AnyView(NewsListView(result: moviesResult))
@@ -58,22 +63,25 @@ struct SearchView: View {
                 }
             }
             .toolbar(content: {
-                ToolbarItem {
-                    Button(action: {
-                        isDarkMode.toggle()
-                    }, label: {
+                ToolbarItemGroup(placement: .navigationBarTrailing, content: {
+                    Button(action: {isDarkMode.toggle()}, label: {
                         Label("Dark", systemImage: isDarkMode ? "lightbulb.fill" : "lightbulb")
                     })
-                }
+                    Button(action: {isArabic.toggle()}, label: {
+                        Label("Language", systemImage: isArabic ? "t.bubble" : "t.bubble.fill")
+                    })
+                })
             })
             .navigationBarTitle("News")
         }
+        .accentColor(AppColors.titleTextColor)
         .environment(\.colorScheme, isDarkMode ? .dark : .light)
+        .environment(\.locale, Locale.init(identifier: isArabic ? "ar" : "en"))
+        .environment(\.layoutDirection, isArabic ? .rightToLeft : .leftToRight)
         .onAppear {
-            print("🔴 OnAppear")
             lastSearchResult()
         }
-        .onDisappear { print("🔴 OnDisappear") }
+        .onDisappear {}
     }
     
     /**
@@ -112,6 +120,7 @@ struct SearchView: View {
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView(viewModel: SearchViewModel())
+            .environment(\.locale, Locale.init(identifier: "ar"))
 //            .colorScheme(.dark)
     }
 }

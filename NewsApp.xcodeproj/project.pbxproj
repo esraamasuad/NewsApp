@@ -28,6 +28,8 @@
 		041D4C6F2B23C7650054C237 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C6E2B23C7650054C237 /* NetworkMonitor.swift */; };
 		041D4C712B248A640054C237 /* ColorsScheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041D4C702B248A640054C237 /* ColorsScheme.xcassets */; };
 		041D4C732B248D270054C237 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C722B248D270054C237 /* Theme.swift */; };
+		041D4C772B24940D0054C237 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 041D4C792B24940D0054C237 /* Localizable.strings */; };
+		041D4C7C2B24BC6A0054C237 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C7B2B24BC6A0054C237 /* Defaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,10 @@
 		041D4C6E2B23C7650054C237 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		041D4C702B248A640054C237 /* ColorsScheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorsScheme.xcassets; sourceTree = "<group>"; };
 		041D4C722B248D270054C237 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		041D4C762B2494000054C237 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		041D4C782B24940D0054C237 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		041D4C7A2B24941A0054C237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		041D4C7B2B24BC6A0054C237 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +207,7 @@
 				041D4B9F2B1FC9450054C237 /* Assets.xcassets */,
 				041D4C702B248A640054C237 /* ColorsScheme.xcassets */,
 				041D4C722B248D270054C237 /* Theme.swift */,
+				041D4C792B24940D0054C237 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -235,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				041D4C6E2B23C7650054C237 /* NetworkMonitor.swift */,
+				041D4C7B2B24BC6A0054C237 /* Defaults.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -332,6 +340,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 041D4B8A2B1FC9430054C237;
 			packageReferences = (
@@ -357,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				041D4BA32B1FC9450054C237 /* LaunchScreen.storyboard in Resources */,
+				041D4C772B24940D0054C237 /* Localizable.strings in Resources */,
 				041D4C712B248A640054C237 /* ColorsScheme.xcassets in Resources */,
 				041D4BA02B1FC9450054C237 /* Assets.xcassets in Resources */,
 			);
@@ -392,6 +402,7 @@
 				041D4C2A2B2110650054C237 /* SearchRepository.swift in Sources */,
 				041D4C6A2B23407E0054C237 /* NewsGeneralModel.swift in Sources */,
 				041D4C6F2B23C7650054C237 /* NetworkMonitor.swift in Sources */,
+				041D4C7C2B24BC6A0054C237 /* Defaults.swift in Sources */,
 				041D4B972B1FC9430054C237 /* AppDelegate.swift in Sources */,
 				041D4B992B1FC9430054C237 /* SceneDelegate.swift in Sources */,
 			);
@@ -433,8 +444,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				041D4BA22B1FC9450054C237 /* Base */,
+				041D4C762B2494000054C237 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		041D4C792B24940D0054C237 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				041D4C782B24940D0054C237 /* ar */,
+				041D4C7A2B24941A0054C237 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -444,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -505,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
