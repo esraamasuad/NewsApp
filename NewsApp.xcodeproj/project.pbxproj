@@ -91,7 +91,7 @@
 		041D4C7A2B24941A0054C237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		041D4C7B2B24BC6A0054C237 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		041D4C7D2B250E0B0054C237 /* SearchView_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView_Test.swift; sourceTree = "<group>"; };
-		041D4C802B2518400054C237 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "../../../Downloads/Mvi-SwiftUI-master/README.md"; sourceTree = "<group>"; };
+		041D4C812B251ECA0054C237 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 		041D4B8A2B1FC9430054C237 = {
 			isa = PBXGroup;
 			children = (
-				041D4C802B2518400054C237 /* README.md */,
+				041D4C812B251ECA0054C237 /* README.md */,
 				041D4B952B1FC9430054C237 /* NewsApp */,
 				041D4BAC2B1FC9450054C237 /* NewsAppTests */,
 				041D4BB72B1FC9450054C237 /* NewsAppUITests */,
