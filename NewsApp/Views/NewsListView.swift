@@ -46,7 +46,7 @@ struct ArticleView: View {
                 .frame(height: 150)
                 .cornerRadius(20)
             Text(article.title ?? "")
-                .foregroundColor(.black)
+                .foregroundColor(AppColors.titleTextColor)
                 .font(.subheadline)
             
             Text(article.source?.name ?? "")
@@ -56,7 +56,7 @@ struct ArticleView: View {
             Spacer()
         })
         .padding()
-        .background(Color.white)
+        .background(AppColors.cardBackgroundColor)
         .cornerRadius(20)
     }
 }

@@ -26,6 +26,8 @@
 		041D4C6A2B23407E0054C237 /* NewsGeneralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C692B23407E0054C237 /* NewsGeneralModel.swift */; };
 		041D4C6C2B2340C60054C237 /* SearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C6B2B2340C60054C237 /* SearchList.swift */; };
 		041D4C6F2B23C7650054C237 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C6E2B23C7650054C237 /* NetworkMonitor.swift */; };
+		041D4C712B248A640054C237 /* ColorsScheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041D4C702B248A640054C237 /* ColorsScheme.xcassets */; };
+		041D4C732B248D270054C237 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D4C722B248D270054C237 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		041D4C692B23407E0054C237 /* NewsGeneralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsGeneralModel.swift; sourceTree = "<group>"; };
 		041D4C6B2B2340C60054C237 /* SearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchList.swift; sourceTree = "<group>"; };
 		041D4C6E2B23C7650054C237 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		041D4C702B248A640054C237 /* ColorsScheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorsScheme.xcassets; sourceTree = "<group>"; };
+		041D4C722B248D270054C237 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				041D4B9F2B1FC9450054C237 /* Assets.xcassets */,
+				041D4C702B248A640054C237 /* ColorsScheme.xcassets */,
+				041D4C722B248D270054C237 /* Theme.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				041D4BA32B1FC9450054C237 /* LaunchScreen.storyboard in Resources */,
+				041D4C712B248A640054C237 /* ColorsScheme.xcassets in Resources */,
 				041D4BA02B1FC9450054C237 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +387,7 @@
 				041D4C4A2B2119B30054C237 /* NewsListView.swift in Sources */,
 				041D4C6C2B2340C60054C237 /* SearchList.swift in Sources */,
 				041D4C042B20E6C90054C237 /* SearchView.swift in Sources */,
+				041D4C732B248D270054C237 /* Theme.swift in Sources */,
 				041D4C082B20E7DC0054C237 /* DetailsView.swift in Sources */,
 				041D4C2A2B2110650054C237 /* SearchRepository.swift in Sources */,
 				041D4C6A2B23407E0054C237 /* NewsGeneralModel.swift in Sources */,

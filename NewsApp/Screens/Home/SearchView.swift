@@ -14,6 +14,7 @@ struct SearchView: View {
     @State private var query: String = ""
     @State private var isOffline: Bool = false
     @StateObject private var networkMonitor = NetworkMonitor()
+    @AppStorage("isDarkMode") private var isDarkMode = true
     
     init(viewModel: SearchViewModel) {
         self.vm = viewModel
@@ -56,8 +57,18 @@ struct SearchView: View {
                     Spacer()
                 }
             }
+            .toolbar(content: {
+                ToolbarItem {
+                    Button(action: {
+                        isDarkMode.toggle()
+                    }, label: {
+                        Label("Dark", systemImage: isDarkMode ? "lightbulb.fill" : "lightbulb")
+                    })
+                }
+            })
             .navigationBarTitle("News")
         }
+        .environment(\.colorScheme, isDarkMode ? .dark : .light)
         .onAppear {
             print("🔴 OnAppear")
             lastSearchResult()
@@ -97,9 +108,11 @@ struct SearchView: View {
     }
 }
 
+//MARK: - Preview
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView(viewModel: SearchViewModel())
+//            .colorScheme(.dark)
     }
 }
 

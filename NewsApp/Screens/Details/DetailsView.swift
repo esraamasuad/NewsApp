@@ -18,7 +18,7 @@ struct DetailsView: View {
             Link(destination: URL(string: article.url ?? "")!) {
                 VStack(alignment: .leading, spacing: 20, content: {
                     Text(article.title ?? "")
-                        .foregroundColor(.black)
+                        .foregroundColor(AppColors.titleTextColor)
                         .font(.largeTitle)
                         .lineLimit(nil)
                     KFImage(URL(string: (article.urlToImage ?? "")))
@@ -31,12 +31,12 @@ struct DetailsView: View {
                         .foregroundColor(.gray)
                     Text(article.description_ ?? "")
                         .lineLimit(nil)
-                        .foregroundColor(.black)
+                        .foregroundColor(AppColors.titleTextColor)
                         .font(.caption)
                     Text(article.content ?? "")
                         .lineLimit(nil)
                         .font(.body)
-                        .foregroundColor(.black)
+                        .foregroundColor(AppColors.titleTextColor)
                     Button("Read more...") {
                         openURL(URL(string: article.url ?? "")!)
                     }
